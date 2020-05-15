@@ -1,0 +1,61 @@
+//declaring array variables for diff. 
+
+var random1=0; 
+var random2=0; 
+var random3=0; 
+var head = []; 
+var body = []; 
+var leg = []; 
+
+  function preload() 
+  {
+    
+     for (var i=0;i<7;i++)
+    {
+      head[i] = loadImage(`head${i+1}.jpg`); 
+      body[i] = loadImage(`body${i+1}.jpg`); 
+      leg[i] = loadImage(`leg${i+1}.jpg`); 
+    } 
+    
+    
+    
+  } 
+
+function setup() 
+{
+  createCanvas(300, 600); 
+
+}
+
+function draw () 
+{
+  background(255);   
+  
+  //head
+  image(head[random1],0,0);
+  head[random1].resize(300,200);
+  
+  //body
+  image(body[random2],0,200);
+  body[random2].resize(300,200);
+  
+  //legs
+  image(leg[random3],0,400);
+  leg[random3].resize(300,200);
+}  
+
+function mouseClicked() 
+{ 
+  random1 = int(random(0,7)); 
+  random2 = int(random(0,7)); 
+  random3 = int(random(0,7)); 
+}
+
+// function draw() 
+// {
+//   background(220);
+//   rect(0,0,width,height/3);
+//   rect(0,height/3,width,height/3);
+//   rect(0,2*height/3,width,height/3);
+  
+// }
